@@ -12,7 +12,7 @@ func main() {
 
 func MinMax(arr []int) [2]int {
 	min, max := arr[0], arr[0]
-	for _, v := range arr {
+	for _, v := range arr[1:] {
 		if min > v {
 			min = v
 		}
@@ -20,6 +20,5 @@ func MinMax(arr []int) [2]int {
 			max = v
 		}
 	}
-
 	return [2]int{min, max}
 }
